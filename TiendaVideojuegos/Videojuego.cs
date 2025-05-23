@@ -16,4 +16,19 @@ public class Videojuego
         Genero = genero;
         Precio = precio;
     }
+
+    public string ObtenerPresentacion()
+    {
+        return $"Yo soy {Nombre}, un {Genero} cargado de acción y mi precio es: {Precio:C} monedas";
+    }
+
+    public double AplicarDescuento(double valorDescuento) //valorDescuento son valores de 0 a 100
+    {
+        return Precio - Precio * valorDescuento / 100;
+    }
+
+    public bool SosDelGenero(string nombreGenero)
+    {
+        return nombreGenero.Trim().ToLower() == Genero.Trim().ToLower();
+    }
 }

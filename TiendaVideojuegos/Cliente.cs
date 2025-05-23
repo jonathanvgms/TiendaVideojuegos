@@ -16,4 +16,19 @@ public class Cliente
     {
         return Compras.Sum(juego => juego.Precio);
     }
+
+    public void Comprar(List<Videojuego> videojuegos)
+    {
+        Compras.AddRange(videojuegos);
+    }
+
+    public void MostrarVideojuegos()
+    {
+        foreach (Videojuego videojuego in Compras)
+        {
+            Console.WriteLine($"Nombre: {videojuego.Nombre}");
+            Console.WriteLine($"Genero: {videojuego.Genero}");
+            Console.WriteLine($"Precio: {videojuego.Precio}");
+        }
+    }
 }

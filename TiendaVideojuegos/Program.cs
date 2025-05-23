@@ -16,7 +16,7 @@ cliente2.Compras.Add(gta);
 cliente2.Compras.Add(fifa);
 
 // Tienda
-var tienda = new Tienda();
+var tienda = new Tienda("GameVerse");
 tienda.Clientes.Add(cliente1);
 tienda.Clientes.Add(cliente2);
 
